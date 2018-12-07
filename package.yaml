@@ -34,6 +34,12 @@ library:
     - transformers
 
 executables:
+  export-descriptions:
+    source-dirs:      exe
+    main:             ExportDescriptions.hs
+    other-modules:    []
+    dependencies:
+      - sese-scripts
   export-price-status:
     source-dirs:      exe
     main:             ExportPriceStatus.hs
