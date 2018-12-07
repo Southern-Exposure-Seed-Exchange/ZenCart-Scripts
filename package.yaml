@@ -40,6 +40,12 @@ executables:
     other-modules:    []
     dependencies:
       - sese-scripts
+  export-pages:
+    source-dirs:      exe
+    main:             ExportPages.hs
+    other-modules:    []
+    dependencies:
+      - sese-scripts
   export-price-status:
     source-dirs:      exe
     main:             ExportPriceStatus.hs

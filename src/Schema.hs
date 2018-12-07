@@ -35,4 +35,9 @@ ProductDescription sql=products_description
     name Text sql=products_name
     description Text sql=products_description
     Primary product language
+
+Page sql=ezpages
+    Id sql=pages_id
+    title Text sql=pages_title
+    content Text sql=pages_html_text
 |]
