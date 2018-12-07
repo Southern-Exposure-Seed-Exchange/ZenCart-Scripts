@@ -20,20 +20,23 @@ ghc-options:
 
 dependencies:
   - base >= 4.7 && < 5
+  - cassava
+  - persistent
+  - text
 
 library:
   source-dirs:        src
   dependencies:
-    - persistent
+    - bytestring
+    - monad-logger
     - persistent-mysql
     - persistent-template
-    - text
-    - time
+    - transformers
 
 executables:
   export-price-status:
     source-dirs:      exe
-    main:             Main.hs
+    main:             ExportPriceStatus.hs
     other-modules:    []
     dependencies:
       - sese-scripts
