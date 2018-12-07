@@ -1,0 +1,39 @@
+name:                sese-scripts
+version:             0.1.0.0
+#synopsis:
+#description:
+homepage:            https://github.com/prikhi/sese-scripts#readme
+license:             BSD3
+author:              Pavan Rikhi
+maintainer:          pavan.rikhi@gmail.com
+copyright:           GPL-3.0
+category:            Web
+extra-source-files:
+- README.md
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Wincomplete-record-updates
+- -Wincomplete-uni-patterns
+- -Wredundant-constraints
+
+dependencies:
+  - base >= 4.7 && < 5
+
+library:
+  source-dirs:        src
+  dependencies:
+    - persistent
+    - persistent-mysql
+    - persistent-template
+    - text
+    - time
+
+executables:
+  export-price-status:
+    source-dirs:      exe
+    main:             Main.hs
+    other-modules:    []
+    dependencies:
+      - sese-scripts
