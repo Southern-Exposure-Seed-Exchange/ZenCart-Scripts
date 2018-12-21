@@ -52,3 +52,11 @@ executables:
     other-modules:    []
     dependencies:
       - sese-scripts
+  import-price-status:
+    source-dirs:      exe
+    main:             ImportPriceStatus.hs
+    other-modules:    []
+    dependencies:
+      - sese-scripts
+      - bytestring
+      - vector
