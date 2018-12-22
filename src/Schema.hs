@@ -22,6 +22,7 @@ Product sql=products
     model Text sql=products_model
     status Bool sql=products_status
     price Rational sql=products_price sqltype=decimal(15,4)
+    image Text Maybe sql=products_image
 
 ProductIcon sql=sese_products_icons
     Id sql=icon_id

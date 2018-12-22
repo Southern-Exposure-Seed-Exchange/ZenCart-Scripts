@@ -52,6 +52,17 @@ executables:
     other-modules:    []
     dependencies:
       - sese-scripts
+  import-images:
+    source-dirs:      exe
+    main:             ImportImages.hs
+    other-modules:    []
+    dependencies:
+      - sese-scripts
+      - bytestring
+      - directory
+      - filepath
+      - typed-process
+      - vector
   import-price-status:
     source-dirs:      exe
     main:             ImportPriceStatus.hs
