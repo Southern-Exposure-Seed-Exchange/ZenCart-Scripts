@@ -60,10 +60,8 @@ processImage imageName = do
             , largePath
             ]
     else if ext == ".jpg" then
-        runProcess_ $ proc "jpegoptim"
-            [ "-s"
-            , "--all-progressive"
-            , smallPath
+        mapM_ optimizeJpeg
+            [ smallPath
             , mediumPath
             , largePath
             ]
@@ -73,6 +71,16 @@ processImage imageName = do
 resize :: FilePath -> FilePath -> Int -> IO ()
 resize source dest width =
     runProcess_ $ proc "convert" [ source, "-resize", show width <> ">", dest]
+
+optimizeJpeg :: FilePath -> IO ()
+optimizeJpeg path =
+    runProcess_ $ proc "jpegtran"
+        [ "-copy", "none"
+        , "-optimize"
+        , "-progressive"
+        , "-outfile", path
+        , path
+        ]
 
 
 
