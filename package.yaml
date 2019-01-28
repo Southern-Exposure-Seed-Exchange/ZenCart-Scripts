@@ -71,3 +71,11 @@ executables:
       - sese-scripts
       - bytestring
       - vector
+  import-product-descriptions:
+    source-dirs:      exe
+    main:             ImportProductDescriptions.hs
+    other-modules:    []
+    dependencies:
+      - sese-scripts
+      - bytestring
+      - vector
