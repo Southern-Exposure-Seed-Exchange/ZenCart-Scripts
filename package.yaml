@@ -13,10 +13,8 @@ extra-source-files:
 
 ghc-options:
 - -Wall
-- -Wcompat
-- -Wincomplete-record-updates
-- -Wincomplete-uni-patterns
-- -Wredundant-constraints
+- -fwarn-incomplete-record-updates
+- -fwarn-incomplete-uni-patterns
 
 dependencies:
   - base >= 4.7 && < 5
